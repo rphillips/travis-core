@@ -29,6 +29,8 @@ module Travis
         attr_reader :request, :accepted
 
         def run
+          p self
+          p params
           with_transactional_advisory_lock do
             if accept?
               create && start
