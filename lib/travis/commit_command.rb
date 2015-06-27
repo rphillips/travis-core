@@ -17,7 +17,7 @@ module Travis
     end
 
     def backwards_skip
-      message =~ /\[skip\s+ci\]/i && true
+      message =~ /\[skip\s+ci|travis\]/i && true
     end
   end
 end
